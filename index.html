@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<link rel="stylesheet" href="flexslider.css" type="text/css" media="screen" />
+   <link rel="stylesheet" href="demo.css" type="text/css" media="screen" />
+
+     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+	<script src="jquery.flexslider.js"></script>
+    
+</head>
+
+<body>
+ <section class="slider">
+        <div class="flexslider">
+          <ul class="slides">
+            <li>
+              <img src="images/kitchen_adventurer_cheesecake_brownie.jpg" />
+            </li>
+            <li>
+              <img src="images/kitchen_adventurer_lemon.jpg" />
+            </li>
+            <li>
+              <img src="images/kitchen_adventurer_donut.jpg" />
+            </li>
+            <li>
+              <img src="images/kitchen_adventurer_caramel.jpg" />
+            </li>
+          </ul>
+        </div>
+        <div class="custom-navigation">
+          <a href="#" class="flex-prev">Prev</a>
+          <div class="custom-controls-container"></div>
+          <a href="#" class="flex-next">Next</a>
+        </div>
+      </section>
+</html>
+
+  <script type="text/javascript">
+    
+    $(window).load(function(){
+      $('.flexslider').flexslider({
+        animation: "slide",
+        controlsContainer: $(".custom-controls-container"),
+        customDirectionNav: $(".custom-navigation a"),
+        start: function(slider){
+          $('body').removeClass('loading');
+        }
+      });
+    });
+  </script>
+
